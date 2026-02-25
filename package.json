@@ -1,0 +1,39 @@
+{
+  "name": "mcp-pubmed",
+  "version": "1.0.0",
+  "description": "MCP server for PubMed/NCBI E-utilities API — search articles, retrieve metadata, citations, related articles, MeSH terms, and full-text links",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "mcp-pubmed": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["mcp", "pubmed", "ncbi", "e-utilities", "biomedical", "research", "model-context-protocol"],
+  "author": "PetrefiedThunder",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.1",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/node": "^22.13.5",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.7"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ]
+}
